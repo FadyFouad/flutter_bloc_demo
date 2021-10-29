@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_demo/logic/cubit/counter_cubit.dart';
+import 'package:flutter_bloc_concepts/logic/cubit/counter_cubit.dart';
 
 class ThirdScreen extends StatefulWidget {
   ThirdScreen({Key key, this.title, this.color}) : super(key: key);
@@ -89,7 +89,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   heroTag: Text('${widget.title} 2nd'),
                   onPressed: () {
                     // BlocProvider.of<CounterCubit>(context).increment();
-                    context.bloc<CounterCubit>().increment();
+                    context.read<CounterCubit>().increment();
                   },
                   tooltip: 'Increment',
                   child: Icon(Icons.add),

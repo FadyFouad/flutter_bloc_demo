@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_bloc_demo/presentation/screens/home_screen.dart';
-import 'package:flutter_bloc_demo/presentation/screens/second_screen.dart';
-import 'package:flutter_bloc_demo/presentation/screens/third_screen.dart';
+import 'package:flutter_bloc_concepts/presentation/screens/home_screen.dart';
+import 'package:flutter_bloc_concepts/presentation/screens/second_screen.dart';
+import 'package:flutter_bloc_concepts/presentation/screens/settings_screen.dart';
+import 'package:flutter_bloc_concepts/presentation/screens/third_screen.dart';
 
 class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
-    final GlobalKey<ScaffoldState> key = settings.arguments;
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(
@@ -20,7 +20,6 @@ class AppRouter {
           builder: (_) => SecondScreen(
             title: "Second Screen",
             color: Colors.redAccent,
-            homeScreenKey: key,
           ),
         );
       case '/third':
@@ -29,6 +28,10 @@ class AppRouter {
             title: "Thirst Screen",
             color: Colors.greenAccent,
           ),
+        );
+      case '/settings':
+        return MaterialPageRoute(
+          builder: (_) => SettingsScreen(),
         );
       default:
         return null;
