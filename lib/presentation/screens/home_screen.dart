@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_concepts/constants/enums.dart';
-import 'package:flutter_bloc_concepts/logic/cubit/counter_cubit.dart';
-import 'package:flutter_bloc_concepts/logic/cubit/internet_cubit.dart';
+import 'package:flutter_bloc_demo/constants/enums.dart';
+import 'package:flutter_bloc_demo/logic/cubit/counter_cubit.dart';
+import 'package:flutter_bloc_demo/logic/cubit/internet_cubit.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key, this.title, this.color}) : super(key: key);
